@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Will you be my Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #ffe6f0;
+      padding: 50px;
+    }
+    button {
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 10px;
+      cursor: pointer;}
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<h1 id="question">Will you be my Valentine? 💖</h1>
+
+<button onclick="yesClick()">Yes</button>
+<button onclick="noClick()">No</button>
+
+<div id="boxes" class="hidden">
+  <h2>💝 For You 💝</h2>
+  <p>🎵 Music just for you</p>
+  <p>🌸 Flowers for you</p>
+  <p>💌 Will you be my Valentine?</p>
+</div><script>
+  function noClick() {
+    alert("You can't say no 😭 Try again!");
+  }
+
+  function yesClick() {
+    document.getElementById("question").style.display = "none";
+    document.querySelectorAll("button").forEach(b => b.style.display = "none");
+    document.getElementById("boxes").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
