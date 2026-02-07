@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Will you be my Valentine?</title>
-
   <style>
     body {
       font-family: 'Comic Sans MS', cursive;
@@ -11,7 +10,6 @@
       background-color: #ffe6f0;
       padding: 40px;
     }
-
     h1 {
       font-size: 38px;
       color: #ff4d88;
@@ -23,12 +21,10 @@
       border: none;
       cursor: pointer;
     }
-
     #yesBtn {
       background-color: #ff4d88;
       color: white;
     }
-
     #noBtn {
       background-color: #999;
       color: white;
@@ -45,24 +41,20 @@
       max-width: 350px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-
     img {
       width: 200px;
     }
   </style>
 </head>
-
 <body>  <!-- QUESTION -->
   <div id="questionPage">
     <h1>Will you be my Valentine? 💘</h1>
     <button id="yesBtn" onclick="yesClick()">Yes 💖</button>
     <button id="noBtn" onmouseover="moveNo()">No 💔</button>
   </div>
-
   <!-- GIFTS -->
   <div id="giftPage" class="hidden">
     <h1>I knew it 😭💗</h1>
-
     <!-- MUSIC BOX -->
     <div class="box">
       <h2>🎵 A song for you</h2>
@@ -72,13 +64,11 @@
         frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe></div>
-
     <!-- FLOWER BOX -->
     <div class="box">
       <h2>🌸 Flowers for you</h2>
       <img src="https://i.imgur.com/9QO8YxK.png" alt="flowers">
     </div>
-
     <!-- LETTER BOX -->
     <div class="box">
       <h2>💌 A letter</h2>
@@ -88,7 +78,6 @@
       </p>
     </div>
   </div>
-
   <script>function moveNo() {
       const btn = document.getElementById("noBtn");
       const x = Math.random() * (window.innerWidth - 100);
@@ -96,7 +85,6 @@
       btn.style.left = x + "px";
       btn.style.top = y + "px";
     }
-
     function yesClick() {
       document.getElementById("questionPage").classList.add("hidden");
       document.getElementById("giftPage").classList.remove("hidden");
